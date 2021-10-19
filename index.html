@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INSPIRO'21</title>
+    
+    <!-- Option 1 -->
+    <!-- <link rel="stylesheet" href="index1.css"> -->
+
+    <!-- Option 2 -->
+    <link rel="stylesheet" href="index2.css">
+</head>
+<body>
+    <div class="container">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+        <img src="inspiro'21-01.png" alt="">
+        <h1>
+            <span id="blue"></span><span id="red"></span>
+        </h1>
+        <h3>Something Big is Coming Your Way</h3>
+    </div>
+
+    <script>
+        let text = "Exploring The Potentials";
+        let currentText = "";
+
+        async function type() {
+            for (let index = 1; index <= 12; index++) {
+                currentText = text.slice(0, index);
+                document.querySelector("#blue").textContent = currentText;
+                await new Promise(r => setTimeout(r, 250));
+            }
+            for (let index = 13; index <= 24; index++) {
+                currentText = text.slice(12, index);
+                document.querySelector("#red").textContent = currentText;
+                await new Promise(r => setTimeout(r, 250));
+            }
+            document.getElementsByTagName("h3")[0].style.opacity = 1;
+        }
+
+        type();
+
+    </script>
+</body>
+</html>

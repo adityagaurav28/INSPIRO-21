@@ -1,0 +1,61 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(-90deg,#F72315, #02AAE5);
+    background-size: 200% 200%;
+    animation: change 10s ease-in-out infinite;
+}
+
+.container img {
+    margin-top: 50px;
+    height: 400px;
+}
+
+@keyframes change {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+h1 {
+    font-size: 50px;
+    position: relative;
+    margin: 0 auto;
+    font-family: "Source Code Pro", monospace;
+    position: relative;
+    width: max-content;
+    overflow: visible;
+  }
+  
+h1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 100%;
+    width: 0.125em;
+    background: black;
+    animation: blink 750ms steps(24) infinite;
+}
+
+@keyframes blink {
+to {
+    background: transparent;
+}
+}
