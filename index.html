@@ -26,17 +26,17 @@
     </div>
 
     <script>
-        let text = "Exploring The Potentials";
+        let text = "Exploring Potentials";
         let currentText = "";
 
         async function type() {
-            for (let index = 1; index <= 12; index++) {
+            for (let index = 1; index <= 10; index++) {
                 currentText = text.slice(0, index);
                 document.querySelector("#blue").textContent = currentText;
                 await new Promise(r => setTimeout(r, 250));
             }
-            for (let index = 13; index <= 24; index++) {
-                currentText = text.slice(12, index);
+            for (let index = 12; index <= 21; index++) {
+                currentText = text.slice(10, index);
                 document.querySelector("#red").textContent = currentText;
                 await new Promise(r => setTimeout(r, 250));
             }
